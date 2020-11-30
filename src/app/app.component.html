@@ -1,3 +1,74 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+	<ion-menu contentId="menu-content" menuId="menu-content" side="start" type="overlay">
+		<ion-header>
+			<ion-toolbar>
+				<div header-background-image>
+				<img src="assets/home1.png">
+				<ion-title color="success"><center><h2>Soul Care Garden</h2></center></ion-title>
+				</div>
+			</ion-toolbar>
+		</ion-header>
+		<ion-content>
+			<ion-list>
+				<ion-menu-toggle>
+					<ion-item>
+						<ion-label routerLink="/home" color="success">Home</ion-label>
+						<ion-icon color="success" slot="start" name="home"></ion-icon>
+					</ion-item>
+				</ion-menu-toggle>
+			</ion-list>
+
+			<ion-list>
+				<ion-menu-toggle>
+					<ion-item>
+						<ion-label routerLink="/profile" color="success">Profile</ion-label>
+						<ion-icon color="success" slot="start" name="person"></ion-icon>
+					</ion-item>
+				</ion-menu-toggle>
+			</ion-list>
+
+			<ion-list>
+				<ion-menu-toggle>
+					<ion-item>
+						<ion-label routerLink="/branches" color="success">Our Branches</ion-label>
+						<ion-icon color="success" slot="start" name="locate"></ion-icon>
+					</ion-item>
+				</ion-menu-toggle>
+			</ion-list>
+
+			<ion-list>
+				<ion-menu-toggle>
+					<ion-item>
+						<ion-label routerLink="/rooms" color="success">Our Rooms</ion-label>
+						<ion-icon color="success" slot="start" name="bed"></ion-icon>
+					</ion-item>
+				</ion-menu-toggle>
+			</ion-list>
+
+			<ion-list>
+				<ion-menu-toggle>
+					<ion-item>
+						<ion-label routerLink="/about" color="success">About</ion-label>
+						<ion-icon color="success" slot="start" name="help-circle"></ion-icon>
+					</ion-item>
+				</ion-menu-toggle>
+			</ion-list>
+
+			<ion-item>
+			</ion-item>
+			<hr>
+			<hr>
+
+			<ion-list>
+				<ion-menu-toggle>
+					<ion-item>
+						<ion-label routerLink="/logout" color="success">Logout</ion-label>
+						<ion-icon color="success" slot="start" name="log-out"></ion-icon>
+					</ion-item>
+				</ion-menu-toggle>
+			</ion-list>
+		</ion-content>
+	</ion-menu>
+
+  	<ion-router-outlet id="menu-content"></ion-router-outlet>
 </ion-app>

@@ -1,0 +1,76 @@
+<ion-header class="ion-no-border">
+	<ion-toolbar>
+		<!-- <ion-title>signup</ion-title> -->
+		<ion-buttons slot="start">
+			<ion-back-button defaulthref="login" text="">
+			</ion-back-button>
+		</ion-buttons>
+	</ion-toolbar>
+	
+</ion-header>
+	  
+<ion-content class="bg-color">
+
+	<ion-card class="ion-no-margin">
+		<ion-img src="assets/images/signup.png"></ion-img>
+		<ion-card-header>
+			<ion-card-title>
+				Sign Up
+			</ion-card-title>
+			<ion-card-subtitle>
+				<h3>Create new account soul care garden hotel</h3>
+			</ion-card-subtitle>
+		</ion-card-header>
+
+		<ion-card-content>
+			<ion-item>
+				<ion-input name="name" [(ngModel)]="postData.name" type="text" placeholder="Full Name">
+				<ion-icon name="person-outline" ></ion-icon>
+				</ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-input name="email" [(ngModel)]="postData.email" type="text" placeholder="Email">
+				<ion-icon name="mail-outline" ></ion-icon>
+				</ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-input type="password" [(ngModel)]="postData.password" name="password" placeholder="Password" >
+				<ion-icon name="lock-closed"></ion-icon>
+				</ion-input>
+			</ion-item>
+
+			<ion-item>
+				<ion-input type="password" [(ngModel)]="postData.c_password" name="password" placeholder="Confirm Password" >
+				<ion-icon name="lock-closed"></ion-icon>
+				</ion-input>
+			</ion-item>
+
+
+			<div class="sign-btn-wrap">
+				<ion-button (click)="signupAction()" shape="round"  fill="solid" class="sign-btn">Sign Up</ion-button>
+			</div>
+
+			<div class="text-tag">
+				<span>Sign Up with</span>
+			</div>
+
+			<div class="social-btns">
+				<ion-button fill="clear"  class="facebookbtn ion-no-padding">
+					<ion-img src="assets/images/facebook.png"></ion-img>
+				</ion-button>
+				<ion-button fill="clear"  class="googlebtn ion-no-padding">
+					<ion-img src="assets/images/google.png"></ion-img>
+				</ion-button>
+				<ion-button fill="clear"  class="applebtn ion-no-padding">
+					<ion-img src="assets/images/apple.png"></ion-img>
+				</ion-button>
+
+			</div>
+
+		</ion-card-content>
+
+	</ion-card>
+
+</ion-content>

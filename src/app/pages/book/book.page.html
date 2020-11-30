@@ -1,0 +1,55 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+		<ion-buttons slot="start">
+			<ion-back-button defaultHref="home"></ion-back-button>
+		</ion-buttons>
+    </ion-toolbar>
+</ion-header>
+  
+<ion-content fullscreen>
+  
+    <div class="ion-padding">
+  
+		<img class="image" src="https://bluewave.tk/{{ image }}">
+		<br>
+		<br>
+		<b><h1>{{ result }} days</h1></b>
+		<br>
+		<br>
+		<div class="container">
+			<ion-item>
+				<ion-label color="success">From</ion-label>
+				<ion-datetime (ionChange)="calDate()" [(ngModel)]="postData.start_at" display-format="DD-MM-YYYY" placeholder="Pick Date" [min]="today" max="2050"></ion-datetime>
+			</ion-item>
+			<br>
+			<br>
+			<ion-item>
+				<ion-label color="success">To</ion-label>
+				<ion-datetime (ionChange)="calDate()" [(ngModel)]="postData.end_at" display-format="DD-MM-YYYY" placeholder="Pick Date" [min]="today" max="2050"></ion-datetime>
+			</ion-item>
+		</div>
+		<div class="ion-padding">
+			<div class="desc">
+				<h4>
+					{{ d_type }}
+				</h4>
+				<h6>
+					{{ address }}
+				</h6>
+				<h4>
+					<span>₦</span>{{ price }}
+				</h4>
+				<h4 *ngIf="result">
+					Total : <span>₦</span>{{ price * result }}
+				</h4>
+			</div>
+		
+			<ion-button (click)="book()" color="success" mode="ios" expand="block" shape="round">
+				Complete
+			</ion-button>
+		</div>
+  
+    </div>
+  
+  </ion-content>
+  

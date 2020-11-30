@@ -1,0 +1,44 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="home"></ion-back-button>
+  </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+
+<div class="ion-padding-horizontal">
+  
+  <ion-card-content>
+    <div class="cover">
+      <img class="image" src="assets/Avatar.png">
+    </div>
+    <br>
+    <ion-row>
+		<ion-col size="12">
+			<ion-card-title><b>{{ authUser.name }}</b></ion-card-title>
+		</ion-col>
+		<br>
+		<ion-col size="12">
+			<ion-card-title><b>{{ authUser.email }}</b></ion-card-title>
+		</ion-col>
+		<br>
+		<br>
+		<br>
+		<ion-col *ngIf="data" size="12">
+			<ion-button routerLink="/receipt" color="success" mode="ios" expand="block" shape="round">
+        Ongoin Receipt
+      </ion-button>
+		</ion-col>
+    </ion-row>
+  </ion-card-content>
+
+</div>
+
+<ion-button routerLink="/logout" color="danger" mode="ios" expand="block" shape="round">
+  Logout
+</ion-button>
+  
+
+</ion-content>

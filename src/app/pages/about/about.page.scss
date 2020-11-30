@@ -1,0 +1,38 @@
+ion-toolbar {
+    --background: rgba(0,0,0,0);
+}
+
+ion-content {
+    --background: #91d9c4;
+    text-align: center;
+
+    img {
+        padding-top: 28px;
+    }
+
+    .desc {
+        text-align: left;
+        padding-bottom: 20px;
+
+        h4 {
+            font-weight: 900;
+        }
+
+        h6 {
+            font-weight: 400;
+            color: #47615a;
+            line-height: .7cm;
+        }
+    }
+}
+
+.image {
+    
+    margin: auto;
+     height: 400px; 
+     width: 400px; 
+   // border: 2px solid #fff;
+    border-radius: 50%;
+    display: block;
+  
+}
